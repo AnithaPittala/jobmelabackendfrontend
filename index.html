@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobMela</title>
+  <link rel="stylesheet" href="style.css">
+ 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+     background-color:  aliceblue;
+    }
+
+    /* Navbar styling */
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ddd;
+    }
+
+    .profile-section img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    /* Hero Section styling */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn1 {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn1:hover {
+      background-color: #0056b3;
+    }
+
+    /* Slider Controls */
+    .controls button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .controls button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .controls .prev {
+      left: 10px;
+    }
+
+    .controls .next {
+      right: 10px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 1.8rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .btn1 {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg " style="background-color: darkslateblue;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: white;">JobMela</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html" style="margin-left: 205px;color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../About/about.html"style="color: white;">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../jobs/jobs.html"style="color: white;">Job Listings</a></li>
+          <li class="nav-item"><a class="nav-link" href="../companyprofile/index.html"style="color: white;">Company Profiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="../freelancerHub/index.html"style="color: white;">Freelancer Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="../volunteer/index.html"style="color: white;">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact/index.html"style="color: white;">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center profile-section">
+          <a href="#" class="nav-link">Profile</a>
+          <img id="profile-image" src="" alt="User Profile">
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="slider">
+      <div class="slide" style="background-image: url('./images/jobmela\ image.webp');">
+        <div class="content">
+          <p>Explore hundreds of job opportunities from top companies.</p>
+          <a href="../register.html" class="btn1">Register Now</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('./images/jobmela\ 1\ image.webp');">
+        <div class="content">
+          <h1>UNLOCK YOUR FUTURE</h1>
+          <p>Connect with recruiters and start your dream career.</p>
+          <a href="../Joblisting/index.html" class="btn1">Browse Jobs</a>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </section>
+  <button id="openChatButton">💬</button> <!-- Button to open chat -->
+  
+  <div id="chatContainer">
+    <div id="chatHeader">Chat Support</div>
+    <div id="chatMessages"></div>
+    <div id="chatInputContainer">
+      <input type="text" id="chatInput" placeholder="Type a message...">
+      <button id="sendChat">Send</button>
+    </div>
+  </div>
+
+  <!-- Job Categories Section -->
+  <section id="job-categories" style="background-color: aliceblue;">
+    <h2>Direct Walk-in Interviews</h2>
+    <div class="categories"></div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="popup-title"></h2>
+      <div id="popup-details"></div>
+    </div>
+  </div>
+  <section id="about-job-mela" style="background-color: aliceblue;">
+    <div class="section-container">
+      <div class="content-wrapper">
+        <div class="text-content">
+          <h2>About the Job Mela</h2>
+          <p>
+            Our mission is to bridge the gap between job seekers and employers. The Job Mela is a platform that brings opportunities, resources, and a sense of community.
+          </p>
+          <div class="button-group">
+            <button class="action-button" onclick="showContent('learn-more')">Learn More</button>
+            <button class="action-button" onclick="showContent('mission')">Mission</button>
+            <button class="action-button" onclick="showContent('vision')">Vision</button>
+          </div>
+        </div>
+        <div class="video-image-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XydQ6JLBVkc?si=ye58-g4zCJxmboF7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div id="dynamic-content" class="dynamic-content">
+        <!-- Content will appear here -->
+      </div>
+    </div>
+  </section>
+  <section class="more" style="margin-left: 312px;background-color: aliceblue;">
+    <a href="#" class="custom-button">
+        <span class="button-text">READY TO INNOVATE?</span>
+        <span class="button-action"> 
+          <button style="border-radius: 10px; margin-top: 1px; color: black; padding-left: 13px; padding-right: 10px;">
+            Find Out More
+          </button>
+        </span>
+        <span>
+          <img src="./images/globe.png" alt="" style="width: 40px; margin-left: 27px;">
+        </span>
+      </a>
+  </section>
+  <section id="why-job-mela">
+    <div class="container">
+      <h2>Why Job Mela?</h2>
+      <p>
+        Job Mela is more than just a job fair – it’s a community, a platform, and a movement.
+        Whether you’re a fresh graduate, an experienced professional, or a freelancer,
+        Job Mela offers you the resources and opportunities to unlock your career potential.
+      </p>
+  
+      <!-- Features Section -->
+      <div class="card-container">
+        <div class="card">
+          <img src="./images/connent.png" alt="Connect with Employers">
+          <h5 style="font-size: 1.33rem;color: brown;">Connect with Top Employers</h5>
+          <p style="font-size: large;">Job Mela brings you closer to the best employers actively seeking talent. Build relationships that can shape your future.</p>
+        </div>
+        <div class="card">
+          <img src="./images/personalised.png" alt="Personalized Job Alerts">
+          <h5 style="font-size: 1.33rem;color: brown;">Personalized Job Alerts</h5>
+          <p style="font-size: large;">Receive job notifications tailored to your skills, experience, and location preferences, ensuring you never miss an opportunity.</p>
+        </div>
+        <div class="card">
+          <img src="./images/compren.jpg" alt="Comprehensive Career Resources">
+          <h5 style="font-size: 1.33rem;color: brown;">Comprehensive Career Resources</h5>
+          <p style="font-size:large;">Access a wide range of tools, including resume builders, interview tips</p>
+        </div>
+      </div>
+  
+      <!-- Call to Action Button -->
+      <button onclick="window.location.href='./register.html'" style="margin-top: 20px;">Join Job Mela Now</button>
+    </div>
+  </section>
+
+  <section class="job-openings" style="background-color: aliceblue; " >
+    <h1>Job Openings at <span>JobMela</span></h1>
+    <div style="border: 2px solid whitesmoke ; border-radius: 20px 20px;box-shadow: aliceblue;height: 691px;">
+      <div class="job-cards" >
+        <div class="job-card">
+          <h2>WordPress Developer</h2>
+          <p>We are looking for WordPress Developers with a minimum of 2 years of experience.</p>
+          <div class="job-buttons">
+            <button class="btn view-detail">View Detail</button>
+            <button class="btn apply-now"><a href="../applicationform/index.html">Apply Now</a></button>
+          </div>
+        </div>
+        <div class="job-card">
+          <h2>Digital Marketing </h2>
+          <p>The ideal candidate will be responsible for growing revenue through digital media by designing and executing.</p>
+          <div class="job-buttons">
+            <button class="btn view-detail">View Detail</button>
+            <button class="btn apply-now"><a href="../applicationform/index.html">Apply Now</a></button>
+          </div>
+        </div>
+        <div class="job-card">
+          <h2>Graphic Designer</h2>
+          <p>We are looking for a Graphic Designer to create engaging and on-brand graphics for a variety of media.</p>
+          <div class="job-buttons">
+            <button class="btn view-detail">View Detail</button>
+            <button class="btn apply-now"><a href="../applicationform/index.html">Apply Now</a></button>
+          </div>
+        </div>
+        <div class="job-card">
+          <h2>Business Developer</h2>
+          <p>You will be responsible for driving the growth and expansion of our company by identifying new business opportunities.</p>
+          <div class="job-buttons">
+            <button class="btn view-detail">View Detail</button>
+            <button class="btn apply-now"><a href="../applicationform/index.html">Apply Now</a></button>
+          </div>
+        </div>
+
+        <div class="job-card">
+          <h2>Software Engineer</h2>
+          <p>The ideal candidate will be responsible for growing revenue through digital media by designing ,identifying and  executing.</p>
+          <div class="job-buttons">
+            <button class="btn view-detail">View Detail</button>
+            <button class="btn apply-now"><a href="../applicationform/">Apply Now</a></button>
+          </div>
+        </div>
+        <div class="job-card">
+          <h2>Full stack Developer</h2>
+          <p>We are looking for a Full stack developer to create engaging and on-brand codes for a variety of platforms by developing .</p>
+          <div class="job-buttons">
+            <button class="btn view-detail">View Detail</button>
+            <button class="btn apply-now"><a href="../applicationform/index.html">Apply Now</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero1" >
+    <div class="hero-content1">
+        <h1>Your Path to the Perfect Job Starts Here</h1>
+        <p>Build a standout resume with Jobmela and take the first step toward your dream job.</p>
+        <!-- Updated Button -->
+        <a href="your-resume.pdf" download="My_Resume.pdf" class="btn">Download my Resume</a>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span>39%</span>
+                more likely to get hired
+            </div>
+            <div class="hero-stat">
+                <span>8%</span>
+                better pay with your next job
+            </div>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://resume.io/assets/landing/home/hero/copenhagen_resized-8f69067119d68bf05604438633a84b2eb93c9f96a7337d7d8afba97fb4d59ec1.webp" alt="Jobmela Resume Example">
+    </div>
+</section>
+
+<section class="resume-section">
+    <h2>My Resume</h2>
+
+    <div class="resume-content">
+        <p><strong>Experience:</strong> 5+ years of experience in web development, specializing in front-end technologies and working on various exciting projects.</p>
+    </div>
+
+    <div class="resume-content">
+        <p><strong>Skills:</strong></p>
+        <div class="skills-bar">
+            <div class="skill skill-html">HTML - 90%</div>
+        </div>
+        <div class="skills-bar">
+            <div class="skill skill-css">CSS - 80%</div>
+        </div>
+        <div class="skills-bar">
+            <div class="skill skill-js">JavaScript - 75%</div>
+        </div>
+    </div>
+</section>
+<section class="overview-section">
+  <!-- Left Image with Hover Effect -->
+  <div class="image-container">
+      <img src="../Joblisting/image1.webp" alt="Jobmela Overview Image">
+  </div>
+
+  <!-- Right Overview Text -->
+  <div class="text-container">
+      <h2>Jobmela Overview</h2>
+      <p>Jobmela is a dynamic platform designed to help you find the best career opportunities. Whether you are looking for a new job, want to connect with employers, or boost your career with new skills, Jobmela offers a wide range of job listings and resources to help you achieve your professional goals. Explore various sectors, industries, and job openings today with Jobmela!</p>
+      <button class="cta-btn">Get Started</button>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <h1>What Our Users Say</h1>
+  <div class="testimonials">
+    <div class="testimonial">
+      <img src="data:image/jpeg;base64,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" alt="User 1">
+      <div class="user-name">John Doe</div>
+      <div class="user-review">"This product changed my life. I can't imagine going back to how I was before."</div>
+    </div>
+    <div class="testimonial">
+      <img src="data:image/jpeg;base64,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" alt="User 2">
+      <div class="user-name">Jane Smith</div>
+      <div class="user-review">"An incredible experience! Highly recommend it to everyone."</div>
+    </div>
+    <div class="testimonial">
+      <img src="data:image/jpeg;base64,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" alt="User 3">
+      <div class="user-name">Mark Johnson</div>
+      <div class="user-review">"A wonderful experience from start to finish! I'll definitely be coming back."</div>
+    </div>
+  </div>
+</section>
+<section class="partners-section">
+  <h1>Our Trusted Partners</h1>
+  <div class="partners">
+    <div class="partner">
+      <img src="../main/amazon.png" alt="Partner 1 Logo" style="height: 187px;">
+    </div>
+    <div class="partner">
+      <img src="../main/infosys.jpg" alt="Partner 2 Logo" style="height: 187px;">
+    </div>
+    <div class="partner">
+      <img src="../main/delolite.png" alt="Partner 3 Logo" style="height: 187px;">
+    </div>
+    <div class="partner">
+      <img src="../main/ibm.png" alt="Partner 4 Logo" style="height: 187px;">
+    </div>
+    <div class="partner">
+      <img src="data:image/png;base64,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" alt="Partner 4 Logo" style="height: 177px;">
+    </div>
+  
+  </div>
+  <div class="partner-carousel-controls">
+      <button onclick="scrollPartners('left')">◀</button>
+      <button onclick="scrollPartners('right')">▶</button>
+    </div>
+    
+</section>
+
+<section class="faq-section">
+  <h1>Frequently Asked Questions</h1>
+  <div class="faq">
+    <div class="question" onclick="toggleAnswer(this)">
+      <h3>What is this website about?</h3>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>This website is designed to help users generate resumes online with ease.</p>
+    </div>
+  </div>
+  <div class="faq">
+    <div class="question" onclick="toggleAnswer(this)">
+      <h3>Is it free to use?</h3>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>Basic features are free, but advanced features require a subscription.</p>
+    </div>
+  </div>
+  <div class="faq">
+    <div class="question" onclick="toggleAnswer(this)">
+      <h3>How can I contact support?</h3>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>You can contact support via the "Contact Us" page or email us directly at support@example.com.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer >
+  <div class="footer-top">
+    <div class="footer-section">
+      <h3><img src="../main/footer.jpg" alt="" width="190px"></h3>
+      <p>
+        <strong>Address:</strong> 11-5-215/A,second floor,Red Hills,Hyd-500004 <br>
+        <strong>Email:</strong> credencer@gmail.com<br>
+        <strong>Phone:</strong> +91 8125198336
+      </p>
+    </div>
+    <div class="footer-section" style="margin-left: 83px;">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="./index.html" >Home</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="./jobs/jobs.html">Joblistings</a></li>
+        <li><a href="../freelancerHub/index.html">freelancerHub</a></li>
+        <li><a href="../companyprofile/index.html">companyprofile</a></li>
+
+        <li><a href="../volunteer/index.html">volunteer</a></li>
+        <li><a href="../contact/index.html">contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../About/about.html">About Job Mela</a></li>
+        <li><a href="../upcomingevent/index.html">Upcoming Events</a></li>
+        <li><a href="../jobseeker/index.html">Job Seekers</a></li>
+        <li><a href="../employers/index.html">Employers</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <!-- <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div> -->
+  
+    <div class="footer-section" style="margin-right: 83px;">
+      <h3>Subscribe to Updates</h3>
+      <p>Stay updated with the latest job fairs and opportunities.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" style=" height: 22px;
+    margin-top: 6px;"/>
+        <button type="submit" style="height: 28px;">Subscribe</button>
+       
+      </form>
+      <ul style="display: flex; gap: 20px; margin-top: 20px;">
+        <li><a href="https://www.instagram.com"><img src="inst1.webp" alt="" width="30px"></a></li>
+        <li><a href="https://www.facebook.com"><img src="fab.webp" alt="" width="30px" style="background: transparent;"></a></li>
+        <li><a href="https://www.whatsapp.com"><img src="whats.png" alt="" width="30px"></a></li>
+      <li><a href="https://www.linkedin.com"><img src="linkedin.webp" alt="" width="30px"></a></li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2024 Job Mela. All Rights Reserved by Credencer Technologies.</p>
+    <!-- <div class="partners">
+      <p>Powered by:</p>
+      <img src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/100-Famous-Brand%20Logos-From-The-Most-Valuable-Companies-of-2020/chanel.png" alt="Partner 1" />
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAeFBMVEX///8AAADV1dWbm5ulpaXS0tLAwMAgICCQkJBXV1fd3d37+/vKysqgoKD39/fh4eGsrKzr6+vo6OhERES7u7uMjIzy8vJ1dXVJSUlSUlJ7e3u1tbXNzc1kZGQvLy8YGBg5OTmEhIQMDAw7OztoaGgpKSkiIiJmZma3KyxBAAAIhUlEQVR4nO2caZuiOhCFRdwbF1zArW1t7Zn//w+vQFKVhIRyLki0n3o/zUgG65CQVE7K6XQYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYpk3Ci+8Inkv0FQRL30E8kXgc3Nn5DuN5bIKCyHcgT+IQSL58h/IUJtcAmfqOpnlmaaAx8x1Q0/QCg9R3RM1y/GMKDIK576AaJBmX9QXByndYzTGy6buz9h1YQ6wd+u74Dq0R5iu3wGDkO7r6JPsKfXcS3wHWJqkWGHz6DrA+pVXQoOs7wPp8VSs8+Y6vPhHRiQvfAdZnR0j0HV99loTCX2BoXAiJ729ofBAKf4GhsSAk/gJD46da4S8wNI5EJ76roTHF0WfdHiq8paERDZXRFxMK39DQmG+zwHvw9w0h8d0MDXDVPuAjQuGbGRohBL6Hzw4V8jLeydDQTAscfSdCoseI/43uWYt7ixcIhW9iaCR/zcAHcO2TkPgWhoZlxvyGi7/A0LCnn5ivuFxTSd9j7I9wdCWfmK8QCl/b0Fi6d/KYr1RYwzkvbGh8VLqiuGJcq5oFL7xiTKvjxnxlQih8WUMjJALHFeNGtHxZQ4PwRHH0zYiGL2toUJ5oCC2p7n5ZQ4PyRDFfIRq+rKExJwK/QcsB0fJlDQ3iEC2YQMuq48SMVzU0KE/0Ci2p7n5ZQ4M6RcMdbkq0nFR8i1caWzGuFV/iFWrFwB0ukQK9mKGhDKktETiuGA93t3/uGTfO7o+vGI93t2/y2QVnd2rFwCP7x7vbK8eh0TXUFHKGltSh6UsYGjEcRWDXUFPIAVpS3f0ChobiOSnmw8NTCJUgeDc0dAMbu4ZKOnEKoRIEv4aGYfqqs/vjU8iQaOlBlyQp79PRfKBWDJxCqBXDn6Fh3cKi+fD4FEIdmnoyNBwvGp5OUCsGTiHUiuHF0HCXiqLXRK0YOIVciJbtGxpVpiieTnS+icCxJdGwdUOjen5Hr4laMTbQkiqzadnQoKYQXAeoFSOGlkSZTcuGBnU29hdaUivGGFr2iZYtGxqU04npKWVTHKEldWjasqFBRIPrALVi/EBLqsymZUODqqbAdeDxFYMqs2nZ0KCqKbB4prEVo+X0lKq/w+IZasXApJMaGC0bGtTpBE4M1IrxeJlNu+lp0q8mWmT0utCJl0nXDrZM+o4mBf2ywkk4jS3BtYLYEYWg0JmVUNcrCO858GVAt3sKJYWhq6W43nNdd9NfRJe04+sktQ2F+9lgvY8XR7rlM2hD4SYZrD87oaefS7WhcDnqJtPOlm74FFChqA1yrmb/X2EnCifdm6+aDVTY+chxtqyh8J55+PtFX0SMTaSWwsZZRoOoX6yxH5au+Zjcr0/yz1DhvJev6MaMN8/ulG+VrQrj42BwXDq+KD6uD+voCaMzAnc07UOejJeTULrDpzCRiSu+hxvlTgewDy9zi8Ij7Co/B7KcAcrFuugw3Jo1qCLtP0K4CgNwCNcv6uXggjPowJxp9A1VujYU9rX09DsqtsbCDUj0fPjU4L7YsVmXCl2V22WFscORkQov9stjx9cczED/L65aSaHQWS1aUugsYhcKXXuWXKHNB2goLXUWgxYK3QcPpkJ3zWWh0Onv5wrBhR6u8ETIvQ79A8oQveped65Q8d6+V/phlKFw5m6ZK1TKv88r7QQyUyj7v+i27o9y45pAF+3yKX+pOCq5QhhZ02L6V0I3FIKhNsqXnKOyO84UwvnFKp8lY8XTG6N+OS7F4/ru1EfOovBWxzCvZgql1bkC1xYj0xXKTjjBthW97p7yAGBeTeBhjfEyfI34e/09sOxCdc2WI2iIX6T+IAsC1xWKluq5Ndg4PZxI1PlRSswUirECHtAgzBjVV3iDYBFpZg/xHF7z3eWbqymULbUCkgsqFAulZm/LN3eMgQR/pg3bw+K++ocpKLRmoDIwTWFp7c+QsnswkepHFCEqVFOFn9to3dQPFWObApmVDSEEY6ykFoUja8sbKCz+YBTQJKiwvBymjWwtxERiZM4foHBv62JpfmoKC9XmWeBCKhS3NC2pH1BoS6x2DdRMiVFoDglQWHzt2f6vNIXFRGPuySHzFiPbzMN2qNDqqNYfq2I8mi+3ofCPPW5N4c36LA5GH5rlMytFofWEqvbR4tz6aOegULxdxr8aWRRerC03UqF4aGZtSaAq7Mw3peqbfacuxX0MW3IKCkUfGBnw0KJwYW35BQrPticQ6QrvxIPRp5bR1VYoUit92gpAoUi1ztpludnQFIqWeqGaXPJ70Jv6aLmWFBZMFpDy1V4dxaPX5kA5q2U5jXj91TkQcnE9pxG5srrdh7q9HqZ/6vQoE8C7wuNlk4FmgFwfa1vCMogz7lMg9x7iE1CmiBgODXWFC/xUMIP9cBa4GNpDlAiL/BhupDzppvoQ9zTiGHaO29Sh8kXBTazlSjGKsbeQyndiileODDOFsJEWD2uJ28UxDgx4XeQHDdRp4Hu97/U26nY4V4iHoNvRYqoty4ZCPFi9mi3zwYebz3S6GKlb0ew9lC+edNnE9SYKUN1FI8Ue311xYe7x3Yf1uUJ3HUumECpS9tEymcAAbqT+1GlTCJ/GeSJc8mmcD6OYQJwuRz6XWkuVGqohdhX0SK+t9L8LuBQ6e1FMkS6JxWphs3GaKuY3jMrgqissFabtXApLRQ5bTWFnZqj4OisKy7VKuwbLwSLlxR8uSrvGmdo56bIPusqe90LJSHYT8QbgctpXHuZXT8wvMl+PtZG6a7gsM16k29N5vF9kc/2kQHsGo8/r6fo5ytKyWXHZ4TBMpukqu9PhPsSScsvksN+dzru0l91+nl9WdhDHMB2vtuM0HLzq7xMZhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEY5sn8B9fYX2OdbC4cAAAAAElFTkSuQmCC" alt="Partner 2" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXeMySNjwvvK61yM2AvfboJC6nZPSYebVjyw&s" alt="Partner 3" />
+    </div> -->
+  </div>
+</footer>
+  <!-- JavaScript -->
+ <script src="script.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobmela - Employee Dashboard</title>
+
+    <style>
+        /* General reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar styles */
+        nav {
+            background-color: #2c3e50;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Main content area */
+        .main-content {
+            padding: 30px;
+            background-color: #fff;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        /* Profile section styles */
+        .profile-section, .tasks-section, .job-apply-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section h2, .tasks-section h2, .job-apply-section h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .profile-section p, .tasks-section p, .job-apply-section p {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        /* Job application section */
+        .job-card {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-card h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .job-card p {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .job-card button {
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .job-card button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Task list section */
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            background-color: #ecf0f1;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-list li button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .task-list li button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .profile-section p, .tasks-section p, .job-apply-section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <header>
+            <h1>Welcome to Jobmela, Employee!</h1>
+            <p>Here you can manage your profile, view tasks, and apply for jobs.</p>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <h2>Your Profile</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Role:</strong> Employee</p>
+            <button>Edit Profile</button>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="tasks-section">
+            <h2>Your Tasks</h2>
+            <ul class="task-list">
+                <li>
+                    <span>Complete JavaScript Training</span>
+                    <button>Mark as Complete</button>
+                </li>
+                <li>
+                    <span>Submit Weekly Report</span>
+                    <button>Mark as Complete</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Job Apply Section -->
+        <section class="job-apply-section">
+            <h2>Available Jobs</h2>
+
+            <div class="job-card">
+                <h3>Software Engineer</h3>
+                <p>Company: TechCorp</p>
+                <p>Description: We are looking for a skilled software engineer with expertise in JavaScript and Node.js.</p>
+                <button onclick="applyJob('Software Engineer')">Apply</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Data Scientist</h3>
+                <p>Company: DataSolutions</p>
+                <p>Description: Join our team to work on machine learning projects and data analysis.</p>
+                <button onclick="applyJob('Data Scientist')">Apply</button>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        // Function to simulate applying for a job
+        function applyJob(jobTitle) {
+            alert(`You have successfully applied for the ${jobTitle} position!`);
+        }
+    </script>
+
+</body>
+</html>

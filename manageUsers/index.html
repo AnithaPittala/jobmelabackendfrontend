@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobmela - Manage Users</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Main content styles */
+        header {
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        section h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* User card styles */
+        #usersList {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .user-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .user-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .user-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .user-card button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .user-card button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Toast message styles */
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 16px;
+            display: none;
+        }
+
+        .toast.error {
+            background-color: #e74c3c;
+        }
+
+        .toast.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Manage Users</h1>
+            <p>View and manage all registered users</p>
+        </header>
+
+        <section>
+            <h2>Existing Users</h2>
+            <ul id="usersList">
+                <!-- User list will be populated here -->
+            </ul>
+        </section>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Show a toast message (success/error)
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `toast ${isError ? 'error' : ''} visible`;
+            setTimeout(() => {
+                toast.className = 'toast';
+            }, 3000);
+        }
+
+        // Fetch existing users
+        function fetchUsers() {
+            fetch('http://localhost:8080/api/users')
+                .then(response => response.json())
+                .then(data => {
+                    const usersList = document.getElementById('usersList');
+                    usersList.innerHTML = ''; // Clear existing list
+                    data.forEach(user => {
+                        const li = document.createElement('li');
+                        li.classList.add('user-card');
+                        li.innerHTML = `
+                            <h3>${user.name}</h3>
+                            <p><strong>Email:</strong> ${user.email}</p>
+                            <button onclick="deleteUser(${user.id})">Delete User</button>
+                        `;
+                        usersList.appendChild(li);
+                    });
+                })
+                .catch(() => showToast('Failed to load users.', true));
+        }
+
+        // Delete user
+        function deleteUser(id) {
+            fetch(`http://localhost:8080/api/users/${id}`, { method: 'DELETE' })
+                .then(response => {
+                    if (response.ok) {
+                        showToast('User deleted successfully!');
+                        fetchUsers();  // Refresh the user list
+                    } else {
+                        showToast('Failed to delete user.', true);
+                    }
+                });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchUsers();  // Load users when the page is loaded
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/dist/stomp.min.js"></script>
+</head>
+<body>
+    <h1>Chat</h1>
+    <div id="chat"></div>
+    <input type="text" id="message" placeholder="Type a message"/>
+    <button id="send">Send</button>
+
+    <script>
+        var socket = new SockJS('/chat');
+        var stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, function(frame) {
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/topic/messages', function(messageOutput) {
+                var message = messageOutput.body;
+                var chatDiv = document.getElementById('chat');
+                chatDiv.innerHTML += "<p>" + message + "</p>";
+            });
+        });
+
+        document.getElementById('send').onclick = function() {
+            var message = document.getElementById('message').value;
+            stompClient.send("/app/sendMessage", {}, message);
+            document.getElementById('message').value = '';
+        };
+    </script>
+</body>
+</html>

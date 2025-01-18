@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobmela Login</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        /* Container Styling */
+        .login-container {
+            margin: 72px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 406px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkslateblue;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 480px) {
+            .login-container {
+                width: 90%;
+            }
+        }
+
+
+
+        .container {
+    width: 100%;
+    max-width: 900px;  /* Increased container width */
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    /* border: 2px solid #ff6600; */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  /* Header Section */
+  .header {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff6600;
+    animation: slideDown 1s ease-in-out;
+    background-color: #ffebcc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  /* Subtitle Section */
+  .subtitle {
+    font-size: 24px;
+    color: #000;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-in-out;
+    background-color: #ffebcc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Details Section */
+  .details {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #333;
+    line-height: 1.5;
+    animation: slideUp 2s ease-in-out;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+
+  .arrow {
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+  }
+
+  /* Flex Layout for the Slider and Image */
+  .offer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .slider-container {
+    width: 60%;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff6600;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slider-value {
+    font-size: 18px;
+    color: #ff6600;
+    margin-top: 10px;
+  }
+
+  .image-section {
+    width: 35%;
+    text-align: center;
+    animation: fadeInImage 1.5s ease-in-out;
+  }
+
+  .image-section img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+    animation: scaleUp 1.5s ease-in-out;
+  }
+
+  /* Keyframe Animations */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Animation for Image */
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInImage {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+    </style>
+</head>
+<body>
+<ul style="    display: flex
+;
+    justify-content: space-around;
+    list-style: none;">
+
+    <li >
+        <div class="container" style="margin-top: 97px;">
+           <div class="header">MEGA JOB MELA 2024</div>
+           <div class="subtitle">NURSES JOBS & WORK FROM HOME JOBS AVAILABLE</div>
+           <div class="details">
+             <div>
+               <span class="highlight">Spot Offer Letter</span> | 70 Companies
+             </div>
+             <div>
+               <strong>Date:</strong> 26th November 2024, Tuesday
+             </div>
+             <div>
+               <strong>Time:</strong> 8 AM - 2 PM
+             </div>
+             <div>
+               <strong>Venue:</strong> Khaja Mansion Function Hall, Masab Tank, Banjara Hills Road
+             </div>
+             <div class="arrow">⬇ Location ⬇</div>
+           </div>
+       
+           <!-- Offer Letter Section with Image -->
+           <!-- <div class="offer-section"> -->
+             <!-- Slider Section -->
+             <!-- <div class="slider-container">
+               <label for="offerSlider">Adjust Offer Letter Percentage: </label>
+               <input type="range" id="offerSlider" class="slider" min="0" max="100" value="70" step="1">
+               <div class="slider-value">Offer Letters Available: <span id="sliderValue">70%</span></div>
+             </div> -->
+       
+             <!-- Image Section -->
+             <!-- <div class="image-section">
+               <img src="./job mela.jpg" alt="Job Mela">
+             </div> -->
+           <!-- </div> -->
+         </div>
+    </li>
+
+  <li> <div class="login-container" style="    height: 387px;
+    margin-top: 120px;">
+        <h1>Jobmela Login</h1>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div></li> 
+</ul>
+    
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const loginForm = document.getElementById("loginForm");
+  
+      loginForm.addEventListener("submit", async (event) => {
+          event.preventDefault(); // Prevent form from submitting normally
+  
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+  
+          if (!email || !password) {
+              alert("Please fill in both fields.");
+              return;
+          }
+  
+          const userCredentials = {
+              email: email,
+              password: password,
+          };
+  
+          try {
+              const response = await fetch("http://localhost:8080/api/users/login", {
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(userCredentials),
+              });
+  
+              if (!response.ok) {
+                  const errorData = await response.json();
+                  alert(`Login failed: ${errorData.message || "Invalid credentials"}`);
+                  return;
+              }
+  
+              const data = await response.json();
+              console.log("Login Response Data:", data);
+  
+              if (data.token) {
+                  // Store token in localStorage
+                  localStorage.setItem("authToken", data.token);
+  
+                  // Redirect user based on their role
+                  switch (data.role) {
+                      case "Admin":
+                          window.location.href = "../Admin/index.html";
+                          break;
+                      case "volunteer":
+                          window.location.href = "../VolunteerDashboard/index.html";
+                          break;
+                      case "employee":
+                          window.location.href = "../Employee/index.html";
+                          break;
+                      case "jobseeker":
+                          window.location.href = "../JobseekerDashboard/index.html";
+                          break;
+                      default:
+                          alert("Unknown role! Redirecting to default dashboard.");
+                          window.location.href = "./index.html";
+                          break;
+                  }
+              } else {
+                  alert("Login failed. Please check your credentials.");
+              }
+          } catch (error) {
+              console.error("Error during login:", error);
+              alert("An error occurred. Please try again.");
+          }
+      });
+  });
+  </script>
+  
+   
+    
+</body>
+</html>

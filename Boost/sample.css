@@ -1,0 +1,162 @@
+
+#body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+}
+.boost{
+  display: flex;
+  gap: 88px;
+}
+.card-container {
+  display: flex;
+  /* gap: 20px; */
+  align-items: center;
+}
+
+.card {
+  /* background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  width: 237px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  /* width: 80%;
+  margin: 0 auto 15px; */
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.card .price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin: 5px 0;
+}
+
+.plus-icon {
+  background-color: #38a169;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+
+.boost-card {
+  margin-top: 31px;
+  background: #ffffff;
+  border: 2px solid #38a169;
+  border-radius: 12px;
+  /* width: 600px; */
+  width: 529px;
+  height: 234px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boost-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boost-header h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.best-seller {
+  background: #ffe4b2;
+  color: #ff6600;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.boost-description {
+  font-size: 14px;
+  color: #444;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.price-box {
+  background: #e6f7e9;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.price-box p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+.price-box .price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.btn {
+  background: #6200ee;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #4500b5;
+}
+
+.save-more {
+  color: #fff;
+  background: #38a169;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+}

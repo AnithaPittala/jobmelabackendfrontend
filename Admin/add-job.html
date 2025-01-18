@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Job</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #444;
+    }
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+  <script>
+    function saveJob() {
+      const jobTitle = document.getElementById("jobTitle").value;
+      const jobDescription = document.getElementById("jobDescription").value;
+      const companyName = document.getElementById("companyName").value;
+
+      if (jobTitle && jobDescription && companyName) {
+        const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+        jobs.push({ title: jobTitle, description: jobDescription, company: companyName });
+        localStorage.setItem("jobs", JSON.stringify(jobs));
+        alert("Job added successfully!");
+        window.location.href = "view-job.html";
+      } else {
+        alert("Please fill in all fields!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Create a Job Posting</h1>
+    <form onsubmit="saveJob(); return false;">
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" id="jobTitle" name="jobTitle" required>
+
+      <label for="jobDescription">Job Description:</label>
+      <textarea id="jobDescription" name="jobDescription" rows="5" required></textarea>
+
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" name="companyName" required>
+
+      <button type="submit">Create Job</button>
+    </form>
+  </div>
+</body>
+</html>

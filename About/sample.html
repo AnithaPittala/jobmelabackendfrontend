@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    /** About us section **/
+
+#about-us {
+    height: 457px;
+    text-align: center;
+    /* padding-top: 5%; */
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  #photo {
+    /* float: left;
+    width: auto;
+    height: 350px;
+    padding-right: 50px;
+    padding-top: 3%; */
+    float: left;
+    margin-left: -86px;
+    width: auto;
+    height: 361px;
+    /* padding-right: 101px; */
+    padding-top: 3%;
+  }
+  
+  #description {
+    margin-top: 15.5%;
+    padding: 20px 30px 20px 30px;
+    text-align: center;
+    margin-left: 40%;
+    font-size: 20px;
+    background-color: rgba(144, 182, 153, 0.5);
+    border-radius: 10px;
+  }
+  /*  */
+/* Purpose Section Styling */
+#purpose {
+  padding: 18px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.purpose-heading h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.purpose-heading p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.purpose-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  /* width: 49%;
+  height: 150px;
+  object-fit: cover; */
+  margin-left: 140px;
+    width: 36%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+  /* padding: 20px; */
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Register Button Styling */
+.register-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-register {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-register:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+/*  */
+/* NGO Section Styling */
+#about-ngo {
+  padding: 50px;
+  /* background: linear-gradient(135deg, #ff9a9e, #fad0c4);  Soft gradient background */
+  color: #fff;
+}
+
+.ngo-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between;
+  gap: 20px; */
+  flex-wrap: wrap;
+  background: #ffffff; /* Light background for contrast */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Box shadow to add depth */
+}
+
+/* Left Content Styling */
+.ngo-content {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.ngo-content h2 {
+  font-size: 2.8rem;
+  /* color: #fff; */
+  color: black;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);  /* Text shadow for a glowing effect */
+}
+
+.ngo-content p {
+  font-size: 1.3rem;
+  /* color: #f8f8f8; */
+  color: black;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);  /* Text shadow */
+}
+
+/* Hover Cards Styling */
+.hover-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  flex: 1;
+  min-width: 280px;
+  /* background: linear-gradient(135deg, #6a11cb, #2575fc);  Gradient background for cards */
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);  /* Subtle lift effect */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);  /* Darker shadow on hover */
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  /* background: -webkit-linear-gradient(45deg, #ff9a9e, #fad0c4);  /* Gradient text for headings */
+  background: -webkit-linear-gradient(45deg, #e1332b, #7a3f2e);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  color: #837777;
+  line-height: 1.6;
+}
+
+/* Hidden Content revealed on hover */
+.card-hidden-content {
+  display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.card:hover .card-hidden-content {
+  display: block;  /* Show hidden content when hovered */
+}
+
+/* Right Image Styling */
+.ngo-image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  padding: 10px;
+}
+
+.ngo-image img {
+  /* width: 100%; */
+  width: 545px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+@media(max-width:768px){
+.ab{
+  transform: translateX(-330px);
+}
+.ngo-container{
+  margin-top: -50px;
+    margin-left: -11px;
+    width: 310px;
+}
+.ngo-content{
+  width: 272px;
+
+}
+.ngo-content p{
+  font-size: 1rem;
+}
+.hover-cards {
+  margin-left: -6px;
+}
+.ngo-image img{
+  width: 291px;
+}
+#photo{
+  width: 398px;
+}
+#purpose{
+  margin-top: 337px;
+}
+#description{
+  width: 382px;
+    transform: translateX(-170px);
+    margin-top: 370px;
+}
+.card img {
+  transform: translateX(-35px);    
+}
+}
+/* General Footer Styles */
+footer {
+  background-color:#483D8B; /* Dark Blue */
+  color: #fff;
+  padding: 20px 40px;
+  font-family: Arial, sans-serif;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 20px; */
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  /* min-width: 220px; */
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #ffa500; /* Orange */
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffa500; /* Orange */
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ffa500; /* Orange */
+}
+
+.footer-section form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-section form input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.footer-section form button {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.partners {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.partners img {
+  height: 30px;
+}
+</style>
+</head>
+<body>
+      <!-- Navbar -->
+<nav class="navbar navbar-expand-lg " style="background-color: darkslateblue;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: white;">JobMela</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html" style="margin-left: 205px;color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../About/about.html"style="color: white;">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../jobs/jobs.html"style="color: white;">Job Listings</a></li>
+          <li class="nav-item"><a class="nav-link" href="../companyprofile/index.html"style="color: white;">Company Profiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="../freelancerHub/index.html"style="color: white;">Freelancer Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="../volunteer/index.html"style="color: white;">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact/index.html"style="color: white;">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center profile-section">
+          <a href="#" class="nav-link">Profile</a>
+          <img id="profile-image" src="" alt="User Profile">
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <!-- <h2 style="margin-left: 500px;" class="ab">About Our NGO</h2> -->
+  <section id="about-ngo" >
+    
+      <div class="ngo-container" >
+        
+        <!-- Left Side: Text and Hoverable Cards -->
+        <div class="ngo-content">
+   
+          <p>
+            We are dedicated to creating a better world by addressing social challenges and uplifting communities. Our NGO focuses on education, healthcare, environmental sustainability, and empowering underprivileged groups. With your support, we strive to make a lasting impact.
+          </p>
+  
+          <div class="hover-cards">
+            <!-- Mission Card -->
+            <div class="card">
+              <div class="card-content">
+                <h3>🌍 Mission</h3>
+                <div class="card-hidden-content">
+                  <p>To bring positive change by supporting education, healthcare, and sustainability projects.</p>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Vision Card -->
+            <div class="card">
+              <div class="card-content">
+                <h3>🤝 Vision</h3>
+                <div class="card-hidden-content">
+                  <p>A world where everyone has equal opportunities to thrive and live a dignified life.</p>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Values Card -->
+            <div class="card">
+              <div class="card-content">
+                <h3>❤️ Values</h3>
+                <div class="card-hidden-content">
+                  <p>Empathy, inclusivity, and unwavering commitment to the betterment of society.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right Side: Image -->
+        <div class="ngo-image">
+          <img src="https://cdn.pixabay.com/photo/2016/02/24/13/46/business-1219868_960_720.jpg" alt="About Our NGO">
+        </div>
+      </div>
+  </section>
+  <div class="container">
+    <section id="about-us">
+   
+      <h2>Always giving the best jobs.</h2>
+      <hr class="solid">
+      <!-- <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/tg9hNriQYTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <img src="https://cdn.pixabay.com/photo/2020/09/17/01/47/job-interview-5577755_1280.png" alt="White Shores" id="photo">
+      <p id="description">We are a non-governmental organization (NGO) committed to empowering communities by fostering education, employment, and skill development opportunities.
+
+        Our mission is to bridge the gap between talent and opportunity, enabling individuals to achieve sustainable livelihoods and contribute positively to society.</p>
+    </section>
+    </div>
+    <section id="purpose" >
+        <div class="purpose-heading">
+          <h2>Purpose of Job Mela</h2>
+          <p>Empowering job seekers and connecting them with leading employers.</p>
+        </div>
+        <div class="purpose-cards">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="./images/jobseeker.png" alt="Job Seekers">
+            <div class="card-content">
+              <h3>For Job Seekers</h3>
+              <p>Explore career opportunities and meet top recruiters.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="./images/Employe.png" alt="Employers">
+            <div class="card-content">
+              <h3>For Employers</h3>
+              <p>Connect with talented individuals and build your dream team.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="./images/Network.png" alt="Networking">
+            <div class="card-content">
+              <h3>Networking</h3>
+              <p>Expand your professional network and exchange ideas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="register-button">
+          <a href="#register" class="btn-register">Register Now</a>
+        </div>
+      </section>
+      <footer >
+        <div class="footer-top">
+          <div class="footer-section">
+            <h3><img src="../main/footer.jpg" alt="" width="190px"></h3>
+            <p>
+              <strong>Address:</strong> 123 Job Mela Street, City, State - 54321<br>
+              <strong>Email:</strong> contact@jobmela.com<br>
+              <strong>Phone:</strong> +1 234 567 890
+            </p>
+          </div>
+          <div class="footer-section" style="margin-left: 83px;">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../About/about.html">Home</a></li>
+              <li><a href="../About/about.html">About</a></li>
+              <li><a href="../Joblisting/index.html">Joblistings</a></li>
+              <li><a href="../freelancerHub/index.html">freelancerHub</a></li>
+              <li><a href="../companyprofile/index.html">companyprofile</a></li>
+      
+              <li><a href="../volunteer/index.html">volunteer</a></li>
+              <li><a href="../contact/index.html">contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../About/about.html">About Job Mela</a></li>
+              <li><a href="../upcomingevent/index.html">Upcoming Events</a></li>
+              <li><a href="../jobseeker/index.html">Job Seekers</a></li>
+              <li><a href="../employers/index.html">Employers</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <!-- <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div> -->
+        
+          <div class="footer-section" style="margin-right: 83px;">
+            <h3>Subscribe to Updates</h3>
+            <p>Stay updated with the latest job fairs and opportunities.</p>
+            <form>
+              <input type="email" placeholder="Enter your email" style=" height: 22px;
+          margin-top: 6px;"/>
+              <button type="submit" style="height: 28px;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Job Mela. All Rights Reserved by Credencer technologies.</p>
+        
+        </div>
+      </footer>  
+</body>
+</html>

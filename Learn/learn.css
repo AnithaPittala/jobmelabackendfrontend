@@ -1,0 +1,565 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f9f9f9; */
+  }
+
+  .prep-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .prep-section a {
+    text-decoration: none;
+    color: #0056ff;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .prep-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .prep-section p {
+      margin-top: 71px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .prep-cards {
+      margin-top: -63px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .card img {
+    height: 140px;
+    /* margin-bottom: 15px; */
+  }
+
+  .card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  /* slider */
+
+
+  .slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*  */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Slider Styles */
+  .slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .card-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(300px * 3); /* Adjust for number of cards */
+  }
+  
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+  
+  .card-img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .card h2 {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+  }
+  
+  .card p {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .btn-group {
+    margin-top: 15px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn-primary {
+    background-color: #6a1b9a;
+    color: #fff;
+  }
+  
+  .btn {
+    background-color: #f1f1f1;
+    color: #444;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Slider Buttons */
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .slider-btn.prev {
+    left: 10px;
+  }
+  
+  .slider-btn.next {
+    right: 10px;
+  }
+  
+  .slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+
+
+/*  */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+ /* Skill Assessments Section */
+ .skill-assessments {
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .skill-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .skill-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+  }
+  
+  .skill-card img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .skill-card h3 {
+    color: #4a4a4a;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .skill-card p {
+    color: #777;
+    font-size: 14px;
+  }
+/*  */
+/* Slider Container */
+#slider1 .slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  
+  #slider1 .slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+  }
+  
+  #slider1 .like-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    min-width: 200px; /* Ensures all cards have the same width */
+  }
+  
+  #slider1 .like-card img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  #slider1 .like-card h3 {
+    color: #4a4a4a;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  #slider1 .like-card p {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  /* Buttons */
+  #slider1 .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #slider1 .slider-btn.left {
+    left: 10px;
+  }
+  
+  #slider1 .slider-btn.right {
+    right: 10px;
+  }
+  
+  /* Hide buttons on smaller screens */
+  @media (max-width: 768px) {
+    #slider1 .slider-btn {
+      display: none;
+    }
+  }
+/*  */
+
+ 
+  /* contact section */
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #faf5ff;
+    color: #333;
+  }
+  
+  .contact-left {
+    flex: 1;
+    margin-right: -165px;
+    /* margin-right: 20px; */
+  }
+  
+  .contact-left h2 {
+    font-size: 24px;
+    color: #4a148c;
+  }
+  
+  .contact-left p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .contact-right {
+    flex: 1;
+    background-color: #fff;
+    /* padding: 20px; */
+  
+    padding: 61px;
+    border-radius: 76px;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-right form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-right label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .contact-right input, .phone-input select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .phone-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .phone-input select {
+    width: 30%;
+  }
+  
+  .contact-right .submit-btn {
+    margin-top: 20px;
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-right .submit-btn:hover {
+    background-color: #4a148c;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
+
+/*  */
+/*   testimonials */
+  
+  
+.testimonial-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+  }
+  
+  .testimonial-section h2 {
+    color: #0056ff;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .testimonial-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .testimonial-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-card h3 {
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  
+  .testimonial-card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .testimonial-card .product {
+    color: #0056ff;
+    font-weight: bold;
+  }
+
+

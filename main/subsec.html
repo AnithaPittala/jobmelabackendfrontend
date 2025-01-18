@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Info Banner</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f57c00;
+      color: #000;
+    }
+
+    /* Main Banner */
+    .banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 2s forwards;
+    }
+
+    /* Left, Middle, and Right Sections */
+    .left-section, .middle-section, .right-section {
+      flex: 1;
+      text-align: center;
+      animation: slideIn 1s ease-in-out forwards;
+    }
+
+    .left-section {
+      animation-delay: 0.2s;
+    }
+
+    .middle-section {
+      animation-delay: 0.4s;
+    }
+
+    .right-section {
+      animation-delay: 0.6s;
+    }
+
+    /* Profile Pic */
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid #f57c00;
+    }
+
+    /* "More Than" Section */
+    .more-than-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      animation: bounceIn 1.5s ease-in-out forwards;
+    }
+
+    .more-than-container h1 {
+      font-size: 48px;
+      color: #f57c00;
+    }
+
+    .more-than-container p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Statistics Section */
+    .statistics-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      animation: bounceIn 1.5s ease-in-out forwards;
+    }
+
+    .statistics-container h2 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    .statistics-container .stat-value {
+      font-size: 60px;
+      font-weight: bold;
+      color: #f57c00;
+    }
+
+    /* Important Note Section */
+    .important-note {
+      background-color: #f57c00;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      animation: fadeIn 2s forwards;
+    }
+
+    .important-note h3 {
+      font-size: 20px;
+    }
+
+    .important-note .contact-number {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #f57c00;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Banner -->
+  <div class="banner">
+    <!-- Left Section -->
+    <div class="left-section">
+      <img src="https://www.indiafilings.com/learn/wp-content/uploads/2023/03/Can-a-single-person-own-a-firm-in-India.jpg" alt="Event Organizer" class="profile-pic">
+      <p class="event-by">
+        Event By<br>
+        <strong>MD. MANNAN ULLAH KHAN</strong><br>
+        (Chairman Deccan Blasters)
+      </p>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="middle-section">
+      <div class="more-than-container">
+        <h1>MORE THAN 18000+</h1>
+        <p>JOBS GIVEN TO THE UNEMPLOYED YOUTH</p>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <!-- <div class="statistics-container">
+        <h2>SUCCESS STATISTICS</h2>
+        <div class="stat-value">1200+</div>
+        <p>COMPANIES PARTNERED</p>
+        <div class="stat-value">50+</div>
+        <p>EVENTS ORGANIZED</p>
+      </div> -->
+      <!-- Important Note Section -->
+      <div class="important-note">
+        <h3>IMPORTANT NOTE:</h3>
+        <p>Bring Multiple Copies of Resume. If Phone is Busy, Directly Come to Venue.</p>
+        <p><strong>FOR MORE DETAILS:</strong> <span class="contact-number">83743 15052</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>FOR MORE DETAILS FOLLOW US ON</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">/MANNANJAH</a>
+    </div>
+  </footer>
+
+</body>
+</html>

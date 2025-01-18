@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Upload</title>
+</head>
+<body>
+    <h2>Upload Your Resume</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="resume">Select Resume:</label>
+        <input type="file" id="resume" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <p id="status"></p>
+
+    <script>
+        // Handle the form submission using JavaScript
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData();
+            formData.append("file", document.getElementById('resume').files[0]);
+
+            fetch('http://localhost:8080/upload/resume', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('status').textContent = "File uploaded successfully!";
+            })
+            .catch(error => {
+                document.getElementById('status').textContent = "File upload failed: " + error;
+            });
+        });
+    </script>
+</body>
+</html>

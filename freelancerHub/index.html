@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg " style="background-color: darkslateblue;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: white;">JobMela</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html" style="margin-left: 205px;color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../About/about.html"style="color: white;">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../jobs/jobs.html"style="color: white;">Job Listings</a></li>
+          <li class="nav-item"><a class="nav-link" href="../companyprofile/index.html"style="color: white;">Company Profiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="../freelancerHub/index.html"style="color: white;">Freelancer Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="../volunteer/index.html"style="color: white;">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact/index.html"style="color: white;">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center profile-section">
+          <a href="#" class="nav-link">Profile</a>
+          <img id="profile-image" src="" alt="User Profile">
+        </div>
+      </div>
+    </div>
+  </nav>
+    <!-- Freelancer Hub Section -->
+    <section id="freelancer-hub" style="background-color: aliceblue;">
+        <div class="freelancer-container">
+            <h2 style="color: black;">Freelancer Hub: Dedicated Section for Freelance Opportunities</h2>
+            <p style="color: brown;">Explore the latest freelance job opportunities. Choose from a wide range of projects across various domains. Get started today!</p>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-filter">
+                <input type="text" id="search-input" placeholder="Search jobs by title or description..." oninput="filterJobs()">
+                <select id="skill-filter" onchange="filterJobs()">
+                    <option value="">Select Skill</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="content-writing">Content Writing</option>
+                </select>
+                <select id="location-filter" onchange="filterJobs()">
+                    <option value="">Select Location</option>
+                    <option value="remote">Remote</option>
+                    <option value="usa">USA</option>
+                    <option value="india">India</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
+
+            <!-- Freelance Job Cards -->
+            <div class="freelancer-cards" id="job-list">
+                <!-- Freelance Job Card 1 -->
+                <div class="freelance-card" data-skills="web-development" data-location="remote">
+                    <div class="card-header">
+                        <h3>💻 Web Developer</h3>
+                        <p>Project Duration: 3 Months</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Looking for a skilled web developer to build a responsive website for a startup business. Experience with React.js and Node.js preferred.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+                    </div>
+                </div>
+
+                <!-- Freelance Job Card 2 -->
+                <div class="freelance-card" data-skills="graphic-design" data-location="usa">
+                    <div class="card-header">
+                        <h3>🎨 Graphic Designer</h3>
+                        <p>Project Duration: 2 Months</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Seeking a creative graphic designer to create branding materials for a new product launch. Must be proficient in Adobe Illustrator and Photoshop.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+                    </div>
+                </div>
+
+                <!-- Freelance Job Card 3 -->
+                <div class="freelance-card" data-skills="content-writing" data-location="india">
+                    <div class="card-header">
+                        <h3>📚 Content Writer</h3>
+                        <p>Project Duration: 1 Month</p>
+                    </div>
+                    <div class="card-body">
+                        <p>We are looking for a talented content writer to produce high-quality blog posts for a travel website. Must have SEO knowledge.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+                    </div>
+                </div>
+
+                <!-- Add more job cards as needed -->
+                
+
+    <!-- Freelance Job Card 4 -->
+    <div class="freelance-card" data-skills="graphic-design" data-location="remote">
+        <div class="card-header">
+            <h3>🎨 Logo Designer</h3>
+            <p>Project Duration: 1 Month</p>
+        </div>
+        <div class="card-body">
+            <p>We need a talented logo designer to create a unique logo for a new e-commerce platform. Must have experience in modern design trends.</p>
+        </div>
+        <div class="card-footer">
+            <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <!-- Freelance Job Card 5 -->
+    <div class="freelance-card" data-skills="web-development" data-location="uk">
+        <div class="card-header">
+            <h3>💻 Frontend Developer</h3>
+            <p>Project Duration: 4 Months</p>
+        </div>
+        <div class="card-body">
+            <p>We are looking for a frontend developer with strong experience in HTML, CSS, and JavaScript. Experience with React.js is a plus.</p>
+        </div>
+        <div class="card-footer">
+            <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <!-- Freelance Job Card 6 -->
+    <div class="freelance-card" data-skills="content-writing" data-location="remote">
+        <div class="card-header">
+            <h3>✍️ Copywriter</h3>
+            <p>Project Duration: 2 Months</p>
+        </div>
+        <div class="card-body">
+            <p>Looking for a skilled copywriter to write marketing copy for a tech startup. Experience in writing for SaaS companies is a plus.</p>
+        </div>
+        <div class="card-footer">
+            <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <!-- Freelance Job Card 7 -->
+    <div class="freelance-card" data-skills="video-editing" data-location="india">
+        <div class="card-header">
+            <h3>🎬 Video Editor</h3>
+            <p>Project Duration: 3 Months</p>
+        </div>
+        <div class="card-body">
+            <p>We are looking for a skilled video editor to edit promotional videos for social media. Must have experience with Adobe Premiere Pro and After Effects.</p>
+        </div>
+        <div class="card-footer">
+            <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <!-- Freelance Job Card 8 -->
+    <div class="freelance-card" data-skills="web-development" data-location="remote">
+        <div class="card-header">
+            <h3>🌐 Full Stack Developer</h3>
+            <p>Project Duration: 6 Months</p>
+        </div>
+        <div class="card-body">
+            <p>We are looking for a full stack developer to join our growing team. Must have expertise in backend frameworks like Node.js and frontend technologies .</p>
+        </div>
+        <div class="card-footer">
+            <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <!-- Freelance Job Card 9 -->
+    <div class="freelance-card" data-skills="graphic-design" data-location="uk">
+        <div class="card-header">
+            <h3>🎨 UX/UI Designer</h3>
+            <p>Project Duration: 2 Months</p>
+        </div>
+        <div class="card-body">
+            <p>Seeking a UX/UI designer to redesign the interface of a mobile app. Must have experience with user-centered design principles and Figma.</p>
+        </div>
+        <div class="card-footer">
+            <button class="apply-btn"><a href="../applicationform/index.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <!-- Freelance Job Card 10 -->
+    <!-- <div class="freelance-card" data-skills="content-writing" data-location="usa">
+        <div class="card-header">
+            <h3>✍️ Technical Writer</h3>
+            <p>Project Duration: 4 Months</p>
+        </div>
+        <div class="card-body">
+            <p>We need a technical writer to create user documentation for a software product. Must have experience with API documentation and writing for developers.</p>
+        </div>
+        <div class="card-footer">
+            <button class="apply-btn">Apply Now</button>
+        </div>
+    </div> -->
+</div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer >
+        <div class="footer-top">
+          <div class="footer-section">
+            <h3><img src="../main/footer.jpg" alt="" width="190px"></h3>
+            <p>
+                <strong>Address:</strong> 11-5-215/A,second floor,Red Hills,Hyd-500004 <br>
+                <strong>Email:</strong> credencer@gmail.com<br>
+                <strong>Phone:</strong> +91 8125198336
+              </p>
+          </div>
+          <div class="footer-section" style="margin-left: 83px;">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../About/about.html">About</a></li>
+              <li><a href="../jobs/jobs.html">Joblistings</a></li>
+              <li><a href="../freelancerHub/index.html">freelancerHub</a></li>
+              <li><a href="../companyprofile/index.html">companyprofile</a></li>
+      
+              <li><a href="../volunteer/index.html">volunteer</a></li>
+              <li><a href="../contact/index.html">contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../About/about.html">About Job Mela</a></li>
+              <li><a href="../upcomingevent/index.html">Upcoming Events</a></li>
+              <li><a href="../jobseeker/index.html">Job Seekers</a></li>
+              <li><a href="../employers/index.html">Employers</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <!-- <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div> -->
+        
+          <div class="footer-section" style="margin-right: 83px;">
+            <h3>Subscribe to Updates</h3>
+            <p>Stay updated with the latest job fairs and opportunities.</p>
+            <form>
+              <input type="email" placeholder="Enter your email" style=" height: 22px;
+          margin-top: 6px;"/>
+              <button type="submit" style="height: 28px;">Subscribe</button>
+            </form>
+            <ul style="display: flex; gap: 20px; margin-top: 20px;">
+                <li><a href="https://www.instagram.com"><img src="../inst1.webp" alt="" width="30px"></a></li>
+                <li><a href="https://www.facebook.com"><img src="../fab.webp" alt="" width="30px" style="background: transparent;"></a></li>
+                <li><a href="https://www.whatsapp.com"><img src="../whats.png" alt="" width="30px"></a></li>
+              <li><a href="https://www.linkedin.com"><img src="../linkedin.webp" alt="" width="30px"></a></li>
+              </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Job Mela. All Rights Reserved by Credencer technologies.</p>
+          <div class="partners">
+        
+          </div>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+   
+</body>
+</html>

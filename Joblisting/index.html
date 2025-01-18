@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs Section</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    .jobs-container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    #jobs-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .job-card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      width: 280px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .job-card h2 {
+      font-size: 20px;
+      margin: 0 0 10px;
+      color: #007bff;
+    }
+
+    .job-card p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .job-card button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .job-card button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="jobs-container">
+    <h1>Brower jobs</h1>
+    <div id="jobs-list">
+      <!-- Job cards will be dynamically added here -->
+    </div>
+  </div>
+
+  <script>
+    // JavaScript: Extended Job Listings
+    const jobs = [
+      {
+        title: "Frontend Developer",
+        company: "Tech Solutions",
+        location: "Remote",
+        description: "Looking for an experienced frontend developer with React skills."
+      },
+      {
+        title: "Backend Developer",
+        company: "Innovatech",
+        location: "New York, NY",
+        description: "Seeking a backend developer proficient in Node.js and MongoDB."
+      },
+      {
+        title: "UI/UX Designer",
+        company: "Creative Studio",
+        location: "San Francisco, CA",
+        description: "Looking for a talented designer to create intuitive user experiences."
+      },
+      {
+        title: "DevOps Engineer",
+        company: "CloudTech",
+        location: "Remote",
+        description: "Seeking a skilled engineer with experience in AWS and CI/CD pipelines."
+      },
+      {
+        title: "Data Scientist",
+        company: "BigData Analytics",
+        location: "Seattle, WA",
+        description: "Expertise in Python, machine learning, and data visualization required."
+      },
+      {
+        title: "Mobile App Developer",
+        company: "AppWorld",
+        location: "Los Angeles, CA",
+        description: "Looking for a developer with experience in Flutter and Swift."
+      },
+      {
+        title: "Digital Marketing Specialist",
+        company: "AdSphere",
+        location: "Chicago, IL",
+        description: "Expert in SEO, social media marketing, and PPC campaigns."
+      },
+      {
+        title: "IT Support Specialist",
+        company: "TechHub",
+        location: "Austin, TX",
+        description: "Provide technical support and troubleshooting for end-users."
+      },
+      {
+        title: "Cybersecurity Analyst",
+        company: "SecureNet",
+        location: "Washington, D.C.",
+        description: "Ensure system security and prevent unauthorized access."
+      },
+      {
+        title: "Project Manager",
+        company: "AgileCorp",
+        location: "Boston, MA",
+        description: "Manage software development projects and ensure timely delivery."
+      },
+      {
+        title: "Full Stack Developer",
+        company: "DevStack",
+        location: "Remote",
+        description: "Proficiency in both frontend and backend technologies is required."
+      },
+      {
+        title: "AI Engineer",
+        company: "NeuralNet Labs",
+        location: "Silicon Valley, CA",
+        description: "Build AI-powered solutions and improve NLP models."
+      }
+    ];
+
+    // Function to load job cards dynamically
+    function loadJobs() {
+      const jobsList = document.getElementById("jobs-list");
+
+      jobs.forEach(job => {
+        const jobCard = document.createElement("div");
+        jobCard.classList.add("job-card");
+
+        jobCard.innerHTML = `
+          <h2>${job.title}</h2>
+          <p><strong>Company:</strong> ${job.company}</p>
+          <p><strong>Location:</strong> ${job.location}</p>
+          <p>${job.description}</p>
+          <button> <a href="../applicationform/index.html" target="_blank">Apply Now</a> </button>
+           
+        `;
+
+        jobsList.appendChild(jobCard);
+      });
+    }
+
+    // Load jobs when the page loads
+    window.onload = loadJobs;
+  </script>
+</body>
+</html>

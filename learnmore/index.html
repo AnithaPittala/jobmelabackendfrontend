@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobmela - Learn More</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .topics-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .topic-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      width: 280px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .topic-card h2 {
+      font-size: 18px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .topic-card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .details-section {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .details-section h2 {
+      color: #333;
+    }
+
+    .details-section p {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Learn More About Jobmela</h1>
+    <div class="topics-list">
+      <div class="topic-card" onclick="showDetails(0)">
+        <h2>Benefits</h2>
+        <p>Discover the advantages of attending Jobmela and how it can boost your career.</p>
+      </div>
+      <div class="topic-card" onclick="showDetails(1)">
+        <h2>Event Details</h2>
+        <p>Get information about the venue, date, and schedule of Jobmela 2024.</p>
+      </div>
+      <div class="topic-card" onclick="showDetails(2)">
+        <h2>Guidelines</h2>
+        <p>Understand the registration process and required documents for participation.</p>
+      </div>
+      <div class="topic-card" onclick="showDetails(3)">
+        <h2>FAQs</h2>
+        <p>Find answers to frequently asked questions about Jobmela.</p>
+      </div>
+    </div>
+
+    <div class="details-section" id="details-section">
+      <h2>Welcome to Jobmela!</h2>
+      <p>Click on any topic above to learn more about Jobmela and how it can help you achieve your career goals.</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript: Learn More Content
+    const details = [
+      {
+        title: "Benefits",
+        content: "Attending Jobmela gives you access to top recruiters, networking opportunities, career guidance sessions, and on-the-spot job offers."
+      },
+      {
+        title: "Event Details",
+        content: "Jobmela 2024 will be held on March 15th at the Tech Convention Center, Downtown City. The event starts at 10:00 AM and concludes at 5:00 PM."
+      },
+      {
+        title: "Guidelines",
+        content: "Ensure you register online before the event. Bring multiple copies of your updated resume, valid photo ID, and arrive 30 minutes early for a smooth entry."
+      },
+      {
+        title: "FAQs",
+        content: "1. Is registration free? Yes, registration is free for all attendees. 2. Can I bring a friend? Yes, but they must also register. 3. What should I wear? Formal or business casual attire is recommended."
+      }
+    ];
+
+    // Function to display details dynamically
+    function showDetails(index) {
+      const detailsSection = document.getElementById("details-section");
+      detailsSection.innerHTML = `
+        <h2>${details[index].title}</h2>
+        <p>${details[index].content}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

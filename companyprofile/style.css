@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Container Layout */
+  .container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar Navigation */
+  .sidebar {
+    background-color:darkslateblue;
+    color: #fff;
+    width: 260px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+  }
+  
+  .sidebar h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #fff;
+  }
+  
+  .sidebar ul {
+    font-size: 1.2rem;
+    font-style: oblique;
+    font-weight: 900;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #1abc9c;
+  }
+  
+  /* Main Content */
+  .content {
+    margin-left: 260px;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    margin-right: 20px;
+  }
+  
+  .job-mela-logo {
+    font-size: 24px;
+    color: #1abc9c;
+    font-weight: bold;
+  }
+  
+  /* Card Section */
+  .card {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animations */
+  
+  /* Fade-in Animation */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  /* Slide-in-left Animation */
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  /* Slide-in-right Animation */
+  .slide-in-right {
+    animation: slideInRight 1s ease-out;
+  }
+  
+  @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  /* Card Section Titles */
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  /* Styling for the Navigation */
+  .sidebar ul li a:hover {
+    color: #1abc9c;
+    font-weight: bold;
+  }
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .content {
+      padding: 10px;
+  }
+
+  .profile-header {
+      flex-direction: column;
+      text-align: center;
+     
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar h2 {
+      font-size: 16px;
+  }
+
+  .sidebar ul li a {
+      font-size: 14px;
+  }
+
+  .profile-header {
+
+      gap: 10px;
+  }
+
+  .job-mela-logo {
+      font-size: 18px;
+  }
+
+  .section h3 {
+      font-size: 18px;
+  }
+}
+  

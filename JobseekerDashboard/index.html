@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Job Portal</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Search Jobs</a></li>
+                <li><a href="#">Saved Jobs</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Welcome, <span th:text="${jobSeeker.name}"></span></h1>
+                <p>Your Job Search Progress</p>
+            </header>
+            <section class="dashboard">
+                <div class="stat">
+                    <h3>Applications</h3>
+                    <p><span th:text="${jobSeeker.applications}"></span> Submitted</p>
+                </div>
+                <div class="stat">
+                    <h3>Saved Jobs</h3>
+                    <p><span th:text="${jobSeeker.savedJobs}"></span> Jobs</p>
+                </div>
+                <div class="stat">
+                    <h3>Interviews</h3>
+                    <p><span th:text="${jobSeeker.interviews}"></span> Scheduled</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jobmela Registration</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+       
+        .container {
+    width: 100%;
+    max-width: 900px;  /* Increased container width */
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    /* border: 2px solid #ff6600; */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  /* Header Section */
+  .header {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff6600;
+    animation: slideDown 1s ease-in-out;
+    background-color: #ffebcc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  /* Subtitle Section */
+  .subtitle {
+    font-size: 24px;
+    color: #000;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-in-out;
+    background-color: #ffebcc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Details Section */
+  .details {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #333;
+    line-height: 1.5;
+    animation: slideUp 2s ease-in-out;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+
+  .arrow {
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+  }
+
+  /* Flex Layout for the Slider and Image */
+  .offer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .slider-container {
+    width: 60%;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff6600;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slider-value {
+    font-size: 18px;
+    color: #ff6600;
+    margin-top: 10px;
+  }
+
+  .image-section {
+    width: 35%;
+    text-align: center;
+    animation: fadeInImage 1.5s ease-in-out;
+  }
+
+  .image-section img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+    animation: scaleUp 1.5s ease-in-out;
+  }
+@media(max-width:768px){
+  ul{
+   background-color: green;
+    display: flex
+  }
+}
+  /* Keyframe Animations */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Animation for Image */
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInImage {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+        h1 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 40px;
+        }
+
+        /* Form Styles */
+        #registerForm {
+            width: 350px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        #registerForm label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        #registerForm input, #registerForm select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #registerForm button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkslateblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #registerForm button:hover {
+            background-color: #45a049;
+        }
+
+        /* Table Styles */
+        #usersTable {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+
+        #usersTable th, #usersTable td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        #usersTable th {
+            background-color: #f2f2f2;
+            color: #555;
+        }
+
+        #usersTable tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        #usersTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .alert.error {
+            background-color: #f44336;
+        }
+        
+        .container {
+            margin-top: 6px;
+            width: 82%;
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+            /* border: 2px solid #ff6600; */
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+      
+    </style>
+</head>
+<body>
+  <h1>Jobmela Registration</h1>
+    <ul style="display: flex; list-style: none;" class="jb">
+    <li>
+        <div class="container">
+           <div class="header">MEGA JOB MELA 2024</div>
+           <div class="subtitle">NURSES JOBS & WORK FROM HOME JOBS AVAILABLE</div>
+           <div class="details">
+             <div>
+               <span class="highlight">Spot Offer Letter</span> | 70 Companies
+             </div>
+             <div>
+               <strong>Date:</strong> 26th November 2024, Tuesday
+             </div>
+             <div>
+               <strong>Time:</strong> 8 AM - 2 PM
+             </div>
+             <div>
+               <strong>Venue:</strong> Khaja Mansion Function Hall, Masab Tank, Banjara Hills Road
+             </div>
+           </div>
+         </div>
+    </li>
+
+    <li style="margin-top: 10px;" class="jb1">
+        <!-- Registration Form -->
+        <form id="registerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+
+            <label for="role">Role:</label>
+            <select id="role">
+                <option value="Job Seeker">Job Seeker</option>
+                <option value="Employee">Employee</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option> <!-- Regular User Role -->
+            </select><br><br>
+
+            <button type="submit">Register</button>
+            <a href="./login.html" style="margin-left: 21px;">Already have an account? Login</a>
+        </form>
+    </li>
+</ul>
+
+    <!-- JavaScript to handle the form and role-based redirection -->
+    <script>
+        // Handle Registration Form Submission
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const newUser = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+                role: document.getElementById("role").value
+            };
+
+            // Send registration data to backend
+            fetch('http://127.0.0.1:8080/api/users/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(newUser)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.text(); // Parse the response body
+            })
+            .then(data => {
+                alert(data); // Display success message
+                // Redirect based on role
+                if (newUser.role === "Job Seeker") {
+                    window.location.href = '../JobseekerDashboard/index.html';
+                } else if (newUser.role === "Employee") {
+                    window.location.href = '../Employee/index.html';
+                } else if (newUser.role === "Volunteer") {
+                    window.location.href = './VolunteerDashboard/index.html';
+                } else if (newUser.role === "User") {
+                    window.location.href = './index.html'; // Redirect to user page
+                }else if (newUser.role === "Admin") {
+                    window.location.href = '../Admin/index.html'; // Redirect to user page
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Registration failed. Please try again.');
+            });
+        });
+    </script>
+
+</body>
+</html>

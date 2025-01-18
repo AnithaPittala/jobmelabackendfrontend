@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Partners</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="partners-section">
+    <h1>Our Trusted Partners</h1>
+    <div class="partners">
+      <div class="partner">
+        <img src="https://via.placeholder.com/150" alt="Partner 1 Logo">
+      </div>
+      <div class="partner">
+        <img src="https://via.placeholder.com/150" alt="Partner 2 Logo">
+      </div>
+      <div class="partner">
+        <img src="https://via.placeholder.com/150" alt="Partner 3 Logo">
+      </div>
+      <div class="partner">
+        <img src="https://via.placeholder.com/150" alt="Partner 4 Logo">
+      </div>
+    </div>
+    <div class="partner-carousel-controls">
+        <button onclick="scrollPartners('left')">◀</button>
+        <button onclick="scrollPartners('right')">▶</button>
+      </div>
+      
+  </section>
+
+  <script>
+    let currentScroll = 0;
+  
+    function scrollPartners(direction) {
+      const partnersContainer = document.querySelector('.partners');
+      const scrollAmount = 200; // Adjust scroll amount
+      partnersContainer.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+  
+</body>
+</html>
+

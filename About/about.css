@@ -1,0 +1,401 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+body{
+  background-color: aliceblue;
+}
+
+/** About us section **/
+
+ #about-us {
+  height: 457px;
+  text-align: center;
+  /* padding-top: 5%; */
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#photo {
+  /* float: left;
+  width: auto;
+  height: 350px;
+  padding-right: 50px;
+  padding-top: 3%; */
+  float: left;
+  margin-left: -86px;
+  width: auto;
+  height: 361px;
+  /* padding-right: 101px; */
+  padding-top: 3%;
+}
+
+#description {
+  margin-top: 15.5%;
+  padding: 20px 30px 20px 30px;
+  text-align: center;
+  margin-left: 40%;
+  font-size: 20px;
+  background-color: rgba(144, 182, 153, 0.5);
+  border-radius: 10px;
+}
+/*  */
+/* Purpose Section Styling */
+#purpose {
+padding: 18px;
+background: #f9f9f9;
+text-align: center;
+}
+
+.purpose-heading h2 {
+font-size: 2.5rem;
+color: #333;
+margin-bottom: 10px;
+}
+
+.purpose-heading p {
+font-size: 1.2rem;
+color: #555;
+margin-bottom: 30px;
+}
+
+.purpose-cards {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+width: 300px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+/* width: 49%;
+height: 150px;
+object-fit: cover; */
+margin-left: 140px;
+  width: 36%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+/* padding: 20px; */
+}
+
+.card-content h3 {
+font-size: 1.5rem;
+color: #333;
+margin-bottom: 10px;
+}
+
+.card-content p {
+font-size: 1rem;
+color: #666;
+}
+
+/* Register Button Styling */
+.register-button {
+text-align: center;
+margin-top: 30px;
+}
+
+.btn-register {
+padding: 10px 20px;
+background: #007bff;
+color: #fff;
+text-decoration: none;
+font-size: 1.2rem;
+font-weight: bold;
+border-radius: 5px;
+transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-register:hover {
+background: #0056b3;
+transform: scale(1.05);
+}
+/*  */
+/* NGO Section Styling */
+#about-ngo {
+padding: 50px;
+/* background: linear-gradient(135deg, #ff9a9e, #fad0c4);  Soft gradient background */
+color: #fff;
+}
+
+.ngo-container {
+display: flex;
+align-items: center;
+/* justify-content: space-between;
+gap: 20px; */
+flex-wrap: wrap;
+background: #ffffff; /* Light background for contrast */
+border-radius: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Box shadow to add depth */
+}
+
+/* Left Content Styling */
+.ngo-content {
+flex: 1;
+max-width: 600px;
+padding: 20px;
+}
+
+.ngo-content h2 {
+font-size: 2.8rem;
+/* color: #fff; */
+color: black;
+margin-bottom: 20px;
+text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);  /* Text shadow for a glowing effect */
+}
+
+.ngo-content p {
+font-size: 1.3rem;
+/* color: #f8f8f8; */
+color: black;
+line-height: 1.8;
+margin-bottom: 30px;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);  /* Text shadow */
+}
+
+/* Hover Cards Styling */
+.hover-cards {
+  margin-left: 125px;
+  flex-direction: column;
+display: flex;
+justify-content: space-between;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+flex: 1;
+min-width: 280px;
+/* background: linear-gradient(135deg, #6a11cb, #2575fc);  Gradient background for cards */
+border-radius: 15px;
+color: #fff;
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
+position: relative;
+}
+
+.card:hover {
+transform: translateY(-10px);  /* Subtle lift effect */
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);  /* Darker shadow on hover */
+}
+
+.card-content h3 {
+font-size: 1.8rem;
+margin-bottom: 15px;
+/* background: -webkit-linear-gradient(45deg, #ff9a9e, #fad0c4);  /* Gradient text for headings */
+background: -webkit-linear-gradient(45deg, #e1332b, #7a3f2e);
+
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+}
+
+.card-content p {
+font-size: 1.1rem;
+color: #837777;
+line-height: 1.6;
+}
+
+/* Hidden Content revealed on hover */
+.card-hidden-content {
+display: none;
+padding: 15px;
+background-color: #f9f9f9;
+color: #333;
+font-size: 1.1rem;
+line-height: 1.6;
+}
+
+.card:hover .card-hidden-content {
+display: block;  /* Show hidden content when hovered */
+}
+
+/* Right Image Styling */
+.ngo-image {
+flex: 1;
+max-width: 400px;
+text-align: center;
+padding: 10px;
+}
+
+.ngo-image img {
+/* width: 100%; */
+width: 545px;
+border-radius: 20px;
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+/* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+@media(max-width:768px){
+.ab{
+transform: translateX(-330px);
+}
+.ngo-container{
+margin-top: -28px;
+  margin-left: -11px;
+  width: 310px;
+}
+.ngo-content{
+width: 272px;
+
+}
+.ngo-content p{
+font-size: 1rem;
+}
+.hover-cards {
+  flex-direction: column;
+margin-left: -6px;
+}
+.ngo-image img{
+width: 291px;
+}
+#photo{
+width: 398px;
+}
+#purpose{
+margin-top: 337px;
+}
+#description{
+width: 382px;
+  transform: translateX(-170px);
+  margin-top: 370px;
+}
+.card img {
+transform: translateX(-35px);    
+}
+.purpose-cards {
+  flex-direction: column;
+  margin-left: 15px;
+}
+}
+/* General Footer Styles */
+footer {
+background-color:#483D8B; /* Dark Blue */
+color: #fff;
+padding: 20px 40px;
+font-family: Arial, sans-serif;
+}
+.footer-top {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+/* gap: 20px; */
+border-bottom: 1px solid #444;
+padding-bottom: 20px;
+}
+
+.footer-section {
+flex: 1;
+/* min-width: 220px; */
+}
+
+.footer-section h3 {
+font-size: 18px;
+color: #ffa500; /* Orange */
+margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+font-size: 17px;
+line-height: 1.5;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+color: #ffa500; /* Orange */
+}
+
+.social-links {
+display: flex;
+gap: 10px;
+}
+
+.social-icon {
+color: #fff;
+font-size: 20px;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.social-icon:hover {
+color: #ffa500; /* Orange */
+}
+
+.footer-section form {
+display: flex;
+margin-top: 10px;
+}
+
+.footer-section form input {
+flex: 1;
+padding: 8px;
+border: none;
+border-radius: 3px;
+margin-right: 8px;
+}
+
+.footer-section form button {
+background-color: #ffa500;
+color: #fff;
+border: none;
+padding: 8px 12px;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.footer-bottom {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+padding-top: 10px;
+font-size: 14px;
+}
+
+.footer-bottom p {
+margin: 0;
+}
+
+.partners {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.partners img {
+height: 30px;
+}
